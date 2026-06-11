@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         xhr.send();
     }
-
+});
     function renderizarDocumentos(lista) {
         if (!tabla) return;
         tabla.innerHTML = '';
@@ -75,4 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         
-});
