@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENÚ LATERAL */
+.barra-lateral {
+    width: 260px;
+    background: #003366;
+    color: white;
+    padding: 25px;
+    position: fixed;
+    border-radius: 12px;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+}
+
+.barra-lateral h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.barra-lateral ul {
+    list-style: none;
+}
+
+.barra-lateral ul li {
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.barra-lateral ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.barra-lateral ul li:hover,
+.barra-lateral ul li.activo {
+    background: #0056b3;
+    transform: translateX(5px);
+    text-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.barra-lateral ul li.activo a {
+    font-weight: bold;
+}
+
+.cerrar,
+.cerrar-sesion {
+    background: #dc3545 !important;
+}
+
+.cerrar:hover,
+.cerrar-sesion:hover {
+    background: #b52b3a !important;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido {
+    margin-left: 260px;
+    padding: 30px;
+    padding-top: 220px;
+    padding-bottom: 180px;
+    width: 100%;
+}
+
+/* CABECERA INSTITUCIONAL */
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    z-index: 20;
+}
+
+.cabecera-izquierda,
+.cabecera-centro,
+.cabecera-derecha {
+    flex: 1;
+}
+
+.cabecera-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera-derecha {
+    text-align: right;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecera-izquierda .info-sistema {
+    max-width: calc(100% - 110px);
+}
+
+.cabecera h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.cabecera p {
+    color: #444;
+    font-size: 18px;
+}
+
+.cabecera .director-mini {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cabecera .avatar-mini {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #dce6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.cabecera .director-mini h3 {
+    color: #003366;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.cabecera .director-mini p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.cabecera .en-linea {
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* TÍTULO DEL MÓDULO */
+.titulo-modulo {
+    margin-bottom: 25px;
+}
+
+.titulo-modulo h1 {
+    color: #003366;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.titulo-modulo p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* PANELES GENERALES */
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border: 1px solid rgba(0,51,102,.1);
+}
+
+.panel h2 {
+    color: #003366;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* PANEL RESUMEN Y TARJETAS */
+.resumen-agenda-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.resumen-tarjeta {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #003366;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.resumen-tarjeta h3 {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.resumen-tarjeta p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.resumen-tarjeta span {
+    font-size: 13px;
+    color: #777;
+}
+
+/* LISTAS DE ACTIVIDADES Y COORDINACIÓN */
+.proximas-actividades,
+.coordinacion-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sin-datos {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 15px;
+}
+
+/* CABECERA DE PANEL Y FILTROS */
+.panel-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.panel-cabecera h2 {
+    margin-bottom: 0;
+}
+
+.filtros-actividades {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filtro-busqueda,
+.filtro-estado {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.filtro-busqueda {
+    width: 260px;
+}
+
+.filtro-busqueda:focus,
+.filtro-estado:focus {
+    border-color: #003366;
+}
+
+/* TABLA DE ACTIVIDADES */
+.tabla-actividades {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabla-actividades thead {
+    background: #003366;
+    color: white;
+}
+
+.tabla-actividades th, 
+.tabla-actividades td {
+    padding: 16px 18px;
+    text-align: left;
+}
+
+.tabla-actividades td {
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 15px;
+}
+
+.tabla-actividades tbody tr {
+    transition: background 0.25s ease;
+}
+
+.tabla-actividades tbody tr:hover {
+    background: #f6f8fc;
+}
+
+/* FECHA Y HORA DE CABECERA */
+.fecha {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111; 
+    }
+.hora {
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366;
+    margin-top: 8px; 
+    }
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+    position: static;
+    background: #003366;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    z-index: 20;
+}
+
+.item-pie { 
+    min-width: 180px;
+     flex: 1; 
+    }
+.marca-pie { 
+    flex: 2; 
+}
+.sitio-pie, .derechos-pie { 
+    text-align: center; 
+}
+.item-pie p { 
+     margin: 0;
+     line-height: 1.5;
+      font-size: 14px;
+     }
+
+/

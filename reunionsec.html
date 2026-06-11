@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuniones - Secretaria</title>
+    <link rel="stylesheet" href="./css-secre/reunionsec.css">
+</head>
+<body>
+    <div class="contenedor">
+        <aside class="sidebar">
+            <h2>Secretaria</h2>
+            <ul>
+                <li class="menu-item"><a href="iniciosec.html">Inicio</a></li>
+                <li class="menu-item"><a href="documentosec.html">Documentos</a></li>
+                <li class="menu-item"><a href="agendasec.html">Agenda</a></li>
+                <li class="menu-item activo"><a href="reunionsec.html">Reuniones</a></li>
+                <li class="menu-item"><a href="cajachica.html">Caja Chica</a></li>
+                <li class="menu-item"><a href="reportesec.html">Reportes</a></li>
+                <li class="menu-item cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+        <main class="contenido">
+            <section class="cabecera">
+                <div class="cabecera-izquierda">
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1>Sistema de Gestión Institucional</h1>
+                        <p>Secretaría</p>
+                    </div>
+                </div>
+                <div class="cabecera-derecha">
+                    <p class="fecha">25 de Mayo de 2026</p>
+                    <p class="hora">09:45:30</p>
+                </div>
+            </section>
+            <section class="titulo-modulo">
+                <h1>Gestión de Reuniones</h1>
+                <p>Gestiona las solicitudes de reuniones del Director General y coordina las convocatorias.</p>
+            </section>
+            <section class="panel solicitud-reuniones">
+                <h2>Solicitudes de reunión</h2>
+                <div class="lista-solicitudes" id="listaSolicitudesSec">
+                    <article>
+                        <h3>Reunión de seguimiento</h3>
+                        <p>Origen: Dirección Académica</p>
+                        <p>Fecha propuesta: 28/05/2026</p>
+                    </article>
+                    <article>
+                        <h3>Convocatoria de presupuesto</h3>
+                        <p>Origen: Finanzas</p>
+                        <p>Fecha propuesta: 29/05/2026</p>
+                    </article>
+                </div>
+            </section>
+            <section class="panel formulario-panel">
+                <h2>Registrar solicitud para el Director</h2>
+                <form id="formSolicitudReunion">
+                    <div class="grupo-formulario">
+                        <label for="temaSolicitud">Tema</label>
+                        <input type="text" id="temaSolicitud" placeholder="Tema de la reunión">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="fechaSolicitud">Fecha</label>
+                        <input type="date" id="fechaSolicitud">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="horaSolicitud">Hora</label>
+                        <input type="time" id="horaSolicitud">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="participantesSolicitud">Participantes</label>
+                        <textarea id="participantesSolicitud" rows="3" placeholder="Participantes propuestos"></textarea>
+                    </div>
+                    <button type="submit" class="btn-registrar">Enviar solicitud</button>
+                </form>
+            </section>
+            <section class="panel">
+                <h2>Reuniones programadas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Tema</th>
+                            <th>Participantes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaReunionesSec">
+                        <tr>
+                            <td>30/05/2026</td>
+                            <td>10:00</td>
+                            <td>Revisión de actas</td>
+                            <td>Director, Secretaría, Finanzas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <footer class="footer">
+                <p>© 2026 INSTTIC - Secretaria</p>
+            </footer>
+        </main>
+    </div>
+    <script src="./secre.js/reunionsec.js"></script>
+</body>
+</html>

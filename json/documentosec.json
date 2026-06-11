@@ -1,0 +1,7 @@
+{
+  "pendientes": [
+    { "codigo": "SEC-101", "asunto": "Correspondencia de inspección", "remitente": "Administración", "fecha": "25/05/2026", "estado": "Pendiente" },
+    { "codigo": "SEC-102", "asunto": "Oficio de acreditación", "remitente": "Dirección Académica", "fecha": "24/05/2026", "estado": "En proceso" },
+    { "codigo": "SEC-103", "asunto": "Memorando de reunión", "remitente": "Finanzas", "fecha": "23/05/2026", "estado": "Pendiente" }
+  ]
+}

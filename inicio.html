@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina principal del director general</title>
+    <link rel="stylesheet" href="./css/inicio.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- Menu lateral -->
+        <aside class="barra-lateral">
+            <h2>Director</h2>
+            <ul>
+                <li class="elemento-menu"><a href="inicio.html">Inicio</a></li>
+                <li class="elemento-menu"><a href="documentos.html">Documentos</a></li>
+                <li class="elemento-menu activo"><a href="agenda.html">Agenda</a></li>
+                <li class="elemento-menu"><a href="reunion.html">Reuniones</a></li>
+                <li class="elemento-menu"><a href="reportes.html">Reportes</a></li>
+                <li class="elemento-menu"><a href="supervision.html">Supervisión</a></li>
+                <li class="elemento-menu cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="contenido">
+
+            <!-- CABECERA INSTITUCIONAL -->
+            <section class="cabecera">
+                <div class="cabecera-izquierda">
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1> Sistema de Gestión Institucional </h1>
+                        <p> Dirección General </p>
+                    </div>
+                </div>
+                <div class="cabecera-centro">
+                    <div class="director-mini">
+                        <div class="avatar-mini"> </div>
+                        <div>
+                            <h3> Director General </h3>
+                            <p> Bienvenido al Sistema </p>
+                            <span class="en-linea"> ● En línea </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabecera-derecha">
+                    <p class="fecha"> 25 de Mayo de 2026 </p>
+                    <p class="hora"> 09:45:30 </p>
+                </div>
+            </section>
+
+            <!-- BIENVENIDA -->
+            <header class="bienvenida">
+                <h1> Bienvenido Señor Director </h1>
+                <p> Último acceso: 25/05/2026 - 08:30 </p>
+            </header>
+
+            <section class="alerta-documentos" id="bloqueAlerta">
+                <h2><span id="alertaContador">0</span> documentos pendientes</h2>
+                <p> Existen documentos esperando su aprobación. </p>
+            </section>
+
+            <!-- TARJETAS ESTADÍSTICAS -->
+            <section class="tarjetas">
+                <div class="tarjeta tarjeta-documentos">
+                    <h3>Documentos</h3>
+                    <p id="cardDocPendientes">0 Pendientes</p>
+                </div>
+                <div class="tarjeta tarjeta-agenda">
+                    <h3>Agenda</h3>
+                    <p>5 Actividades</p>
+                </div>
+                <div class="tarjeta tarjeta-reuniones">
+                    <h3>Reuniones</h3>
+                    <p>3 Programadas</p>
+                </div>
+                <div class="tarjeta tarjeta-reportes">
+                    <h3>Reportes</h3>
+                    <p>8 Generados</p>
+                </div>
+                <div class="tarjeta tarjeta-supervision">
+                    <h3>Supervisión</h3>
+                    <p>4 Procesos Activos</p>
+                </div>
+            </section>
+
+            <!-- AGENDA DEL DÍA -->
+            <section class="agenda-hoy">
+                <h2> Agenda de Hoy </h2>
+                <ul id="listaAgenda"></ul>
+            </section>
+
+            <!-- ACTIVIDAD RECIENTE -->
+            <section class="actividad">
+                <h2> Actividades Recientes </h2>
+                <ul id="listaActividades"></ul>
+            </section>
+
+            <!-- ACCIONES RÁPIDAS -->
+            <section class="acciones">
+                <h2> Acciones Rápidas </h2>
+                <div class="acciones-cuadricula">
+                    <a href="documentos.html"> Gestionar Documentos </a>
+                    <a href="agenda.html"> Consultar Agenda </a>
+                    <a href="reuniones.html"> Convocar Reunión </a>
+                    <a href="reportes.html"> Generar Reporte </a>
+                    <a href="supervision.html"> Supervisar Procesos </a>
+                </div>
+            </section>
+
+            <!-- SUPERVISIÓN INSTITUCIONAL -->
+            <section class="supervision">
+                <h2> Supervisión Institucional </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Departamento</th>
+                            <th>Estado</th>
+                            <th>Responsable</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaSupervision"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 INSTTIC - Director</p>
+    </footer>
+
+    <script src="./js/inicio.js"></script>
+</body>
+
+</html>

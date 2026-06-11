@@ -1,0 +1,18 @@
+{
+  "bienvenida": {
+    "titulo": "Bienvenida Secretaria",
+    "descripcion": "Administra correspondencia, agenda, reuniones, caja chica y reportes."
+  },
+  "cards": [
+    { "clase": "card-documentos", "titulo": "Documentos", "valor": "12 por archivar" },
+    { "clase": "card-agenda", "titulo": "Agenda", "valor": "8 eventos" },
+    { "clase": "card-reunion", "titulo": "Reuniones", "valor": "5 solicitudes" },
+    { "clase": "card-caja", "titulo": "Caja Chica", "valor": "$ 3,450.00 disponibles" },
+    { "clase": "card-reportes", "titulo": "Reportes", "valor": "3 reportes recientes" }
+  ],
+  "resumen": [
+    { "titulo": "Correspondencia", "texto": "Registrar y archivar documentos nuevos" },
+    { "titulo": "Agenda", "texto": "Organizar eventos y citas institucionales" },
+    { "titulo": "Reuniones", "texto": "Preparar solicitudes para el Director" }
+  ]
+}

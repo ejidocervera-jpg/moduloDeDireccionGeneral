@@ -1,0 +1,14 @@
+{
+  "agenda": [
+    { "hora": "09:00", "evento": "Reunión Administrativa" },
+    { "hora": "11:00", "evento": "Firma de Documentos" },
+    { "hora": "14:00", "evento": "Consejo Directivo" }
+  ],
+  "supervision": [
+    { "departamento": "Secretaría", "estado": "Activo", "responsable": "Secretaria General" },
+    { "departamento": "Administración", "estado": "Activo", "responsable": "Administrador" },
+    { "departamento": "Académico", "estado": "Activo", "responsable": "Director Académico" },
+    { "departamento": "Finanzas", "estado": "Activo", "responsable": "Jefe Financiero" }
+  ]
+
+}

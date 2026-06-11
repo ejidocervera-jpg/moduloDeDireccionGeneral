@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    min-height:100vh;
+}
+
+.contenedor{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card-registro{
+    background:white;
+    width:500px;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.card-registro h1{
+    text-align:center;
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.grupo{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#333;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+input:focus,select:focus{
+    outline:none;
+    border:1px solid #0056b3;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.btn-registrar{
+    display:inline-block;
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    background:#0056b3;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    font-size:16px;
+    cursor: pointer;
+}
+
+.btn-registrar:hover{
+    background:#003f88;
+}
+
+.btn-cancelar{
+    flex:1;
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.btn-cancelar:hover{
+ background:#b52b3a;
+}

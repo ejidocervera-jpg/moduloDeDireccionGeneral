@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Sistema de Gestión Institucional</title>
+    <link rel="stylesheet" href="./css/reportes.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- MENÚ LATERAL (Restaurado y Traducido) -->
+        <aside class="barra-lateral">
+            <h2 class="barra-lateral-titulo">Director</h2>
+            <ul class="barra-lateral-menu">
+                <li class="item-menu"><a href="inicio.html">Inicio</a></li>
+                <li class="item-menu"><a href="documentos.html">Documentos</a></li>
+                <li class="item-menu"><a href="agenda.html">Agenda</a></li>
+                <li class="item-menu"><a href="reunion.html">Reuniones</a></li>
+                <li class="item-menu activo"><a href="reportes.html">Reportes</a></li>
+                <li class="item-menu"><a href="supervision.html">Supervisión</a></li>
+                <li class="item-menu cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+            
+            <!-- CABECERA INSTITUCIONAL -->
+            <section class="cabecera">
+                <div class="cabecera-izquierda">
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1>Sistema de Gestión Institucional</h1>
+                        <p>Dirección General</p>
+                    </div>
+                </div>
+                <div class="cabecera-centro">
+                    <div class="director-mini">
+                        <div class="avatar-mini"></div>
+                        <div>
+                            <h3>Director General</h3>
+                            <p>Bienvenido al Sistema</p>
+                            <span class="en-linea">● En línea</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabecera-derecha">
+                    <p class="fecha" id="fecha">25 de mayo de 2026</p>
+                    <p class="hora" id="hora">09:45:30</p>
+                </div>
+            </section>
+
+            <!-- MÓDULO DE REPORTES -->
+            <section class="modulo-reportes">
+                <header class="cabecera-modulo">
+                    <div class="cabecera-izquierda">
+                        <h2>Reportes Administrativos</h2>
+                        <p>Indicadores, estadísticas y análisis del rendimiento institucional</p>
+                        <p class="subtexto-tiempo">Fecha: <span id="fecha">...</span> | Hora: <span id="hora">...</span></p>
+                    </div>
+                    <span class="etiqueta-rol">Gestión de Reportes</span>
+                </header>
+
+                <section class="seccion-controles">
+                    <div class="controles-izquierdos">
+                        <div class="control-grupo">
+                            <label for="periodo-filtro">Período:</label>
+                            <select id="periodo-filtro">
+                                <option value="mayo2026">Mayo 2026 (Mes Actual)</option>
+                                <option value="abril2026">Abril 2026</option>
+                                <option value="marzo2026">Marzo 2026</option>
+                            </select>
+                        </div>
+                        <div class="control-grupo">
+                            <label for="tipo-reporte">Tipo de Reporte:</label>
+                            <select id="tipo-reporte">
+                                <option value="general">Resumen General</option>
+                                <option value="financiero">Financiero</option>
+                                <option value="documental">Documental</option>
+                                <option value="actividades">Actividades</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controles-derechos">
+                        <button class="botn botn-primario" id="btn-generar">Generar Reporte</button>
+                        <button class="botn botn-secundario" id="btn-exportar">Descargar PDF</button>
+                    </div>
+                </section>
+
+                <section class="bloque-datos panel-supervision">
+                    <h3 class="bloque-titulo">Supervisión y Aprobaciones</h3>
+                    <div class="supervision-cuadricula">
+                        <div class="supervision-tarjeta">
+                            <h4>Documentos por aprobar</h4>
+                            <p id="aprobaciones-documentos">Cargando...</p>
+                        </div>
+                        <div class="supervision-tarjeta">
+                            <h4>Procesos administrativos</h4>
+                            <p id="procesos-administrativos">Cargando...</p>
+                        </div>
+                        <div class="supervision-tarjeta">
+                            <h4>Actividades interdepartamentales</h4>
+                            <p id="actividades-coordinacion">Cargando...</p>
+                        </div>
+                    </div>
+                    <div id="lista-aprobaciones" class="lista-aprobaciones-elementos"></div>
+                </section>
+
+                <section class="icr-contenedor">
+                    <div class="icr-tarjeta" style="border-left: 5px solid #2ecc71;">
+                        <div class="icr-cabecera">
+                            <h3>Caja Chica</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-caja">0 XAF</p>
+                        <p class="icr-etiqueta">Saldo Remanente</p>
+                        <p class="icr-detalle">Fondos disponibles</p>
+                    </div>
+                    <div class="icr-tarjeta" style="border-left: 5px solid #3498db;">
+                        <div class="icr-cabecera">
+                            <h3>Documentos</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-documentos">0</p>
+                        <p class="icr-etiqueta">Registrados</p>
+                        <p class="icr-detalle">Período actual</p>
+                    </div>
+                    <div class="icr-tarjeta" style="border-left: 5px solid #e74c3c;">
+                        <div class="icr-cabecera">
+                            <h3>Reuniones</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-reuniones">0</p>
+                        <p class="icr-etiqueta">Realizadas</p>
+                        <p class="icr-detalle">Eventos completados</p>
+                    </div>
+                    <div class="icr-tarjeta" style="border-left: 5px solid #f39c12;">
+                        <div class="icr-cabecera">
+                            <h3>Actividades</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-actividades">0</p>
+                        <p class="icr-etiqueta">Institucionales</p>
+                        <p class="icr-detalle">Ejecutadas</p>
+                    </div>
+                </section>
+
+                <section class="bloque-datos">
+                    <h3 class="bloque-titulo">Resumen Consolidado - Informe del Período</h3>
+                    <div class="tabla-desplazamiento">
+                        <table class="tabla-reporte" id="tabla-resumen">
+                            <thead>
+                                <tr>
+                                    <th>Área / Concepto</th>
+                                    <th>Métrica Evaluada</th>
+                                    <th>Resultado</th>
+                                    <th>Estado</th>
+                                    <th>Conclusión</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-resumen"></tbody>
+                        </table>
+                    </div>
+                    <p class="subtexto-actualizacion">Última actualización del sistema: <span id="ultima-actualizacion">--:--:--</span></p>
+                </section>
+
+                <section class="bloque-datos">
+                    <h3 class="bloque-titulo">Análisis Detallado por Módulos</h3>
+                    <div class="analisis-cuadricula">
+                        <div class="analisis-elemento">
+                            <h4>Gestión Financiera</h4>
+                            <div class="barra-progreso">
+                                <div class="progreso" id="progreso-financiero" style="width: 0%;"></div>
+                            </div>
+                            <p id="texto-financiero">Calculando egresos...</p>
+                        </div>
+                        <div class="analisis-elemento">
+                            <h4>Flujo Documental</h4>
+                            <div class="barra-progreso">
+                                <div class="progreso" id="progreso-documental" style="width: 0%;"></div>
+                            </div>
+                            <p id="texto-documental">Calculando flujo...</p>
+                        </div>
+                        <div class="analisis-elemento">
+                            <h4>Agenda Institucional</h4> 
+                            <div class="barra-progreso">
+                                <div class="progreso" id="progreso-agenda" style="width: 0%;"></div>
+                            </div>
+                            <p id="texto-agenda">Calculando reuniones...</p>
+                        </div>
+                    </div>
+                </section>
+
+        <section class="bloque-datos">
+            <h3 class="bloque-titulo">Recomendaciones para la Toma de Decisiones</h3>
+            <div class="recomendaciones-contenedor">
+                <div id="recomendaciones-lista" class="recomendaciones-lista"></div>
+            </div>
+        </section>
+    </section>
+</main>
+
+        <!-- PIE DE PÁGINA -->
+      <footer class="footer">
+         <p>© 2026 INSTTIC - Director</p>
+     </footer>
+</div>
+    <script src="./js/reportes.js"></script>
+</body>
+</html>

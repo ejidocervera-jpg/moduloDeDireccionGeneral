@@ -1,0 +1,7 @@
+{
+  "eventos": [
+    { "fecha": "27/05/2026", "hora": "09:00", "titulo": "Reunión de coordinación", "lugar": "Sala de Juntas" },
+    { "fecha": "28/05/2026", "hora": "11:30", "titulo": "Firma de documentos", "lugar": "Oficina Dirección" },
+    { "fecha": "29/05/2026", "hora": "14:00", "titulo": "Seguimiento de agenda", "lugar": "Sala de Conferencias" }
+  ]
+}

@@ -1,0 +1,41 @@
+
+{
+  "usuarios": [],
+  "documentos": [],
+  
+  "reuniones": [
+    {
+      "id": "REU-001",
+      "tema": "Reunión de Junta Directiva",
+      "fecha": "29/05/2026",
+      "hora": "14:30",
+      "participantes": "Director, Secretaria, Jefe Administrativo",
+      "estado": "convocada"
+    },
+    {
+      "id": "REU-002",
+      "tema": "Evaluación de Desempeño",
+      "fecha": "02/06/2026",
+      "hora": "10:00",
+      "participantes": "Director, Recursos Humanos",
+      "estado": "pendiente"
+    }
+  ],
+
+  "solicitudesReunion": [
+    { 
+      "id": "SOL-001", 
+      "tema": "Sesión Extraordinaria de Evaluación", 
+      "fecha": "05/06/2026", 
+      "estado": "Pendiente", 
+      "origen": "Secretaría" 
+    },
+    { 
+      "id": "SOL-002", 
+      "tema": "Revisión de Procesos y Auditoría", 
+      "fecha": "10/06/2026", 
+      "estado": "Pendiente", 
+      "origen": "Administración" 
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+:root {
+    --color-primario: #003366;       /* Azul Institucional */
+    --color-secundario: #1a3a52;     /* Azul Oscuro para textos */
+    --color-azul-hover: #0056b3;     /* Azul de realce */
+    --color-morado: #9b59b6;         /* Morado analítico */
+    --color-verde: #2ecc71;          /* Verde de éxito / Caja chica */
+    --color-azul-claro: #3498db;     /* Azul para Documentos */
+    --color-rojo: #e74c3c;           /* Rojo para Reuniones */
+    --color-naranja: #f39c12;        /* Naranja para Actividades */
+    --color-coordinacion: #ff6b35;   /* Naranja de coordinación */
+    --color-fondo: #f4f6f9;          /* Fondo gris claro */
+    --color-blanco: #ffffff;         /* Fondo de bloques */
+    --color-borde: #e8e8e8;          /* Gris separador */
+}
+
+/* REGLAS BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-fondo);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ESTRUCTURA CONTENEDORA PRINCIPAL */
+.contenido {
+    margin-left: 260px;
+    padding: 30px;
+    padding-top: 220px; /* Evita que la cabecera fija tape el contenido */
+    padding-bottom: 120px;
+    width: calc(100% - 260px);
+}
+
+/* CABECERA INSTITUCIONAL FIJA */
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--color-blanco);
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    z-index: 90;
+}
+
+.cabecera-izquierda,
+.cabecera-centro,
+.cabecera-derecha {
+    flex: 1;
+}
+
+.cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.cabecera-izquierda .info-sistema {
+    max-width: calc(100% - 110px);
+}
+
+.cabecera h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.cabecera p {
+    color: #444;
+    font-size: 18px;
+}
+
+.cabecera-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.director-mini {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-mini {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #dce6f8;
+}
+
+.director-mini h3 {
+    color: var(--color-primario);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.director-mini p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.en-linea {
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cabecera-derecha {
+    text-align: right;
+}
+
+.fecha {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+}
+
+.hora {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-primario);
+    margin-top: 8px;
+}
+
+/* MÓDULO DE REPORTES */
+.modulo-reportes {
+    width: 100%;
+}
+
+/* Encabezado de Reportes */
+.cabecera-modulo {
+    background: var(--color-blanco);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera-modulo h2 {
+    font-size: 28px;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+}
+
+.cabecera-modulo p {
+    color: #666;
+    font-size: 16px;
+}
+
+.subtexto-tiempo {
+    margin-top: 5px;
+    font-size: 14px !important;
+    color: #888 !important;
+}
+
+.etiqueta-rol {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Sección de Controles y Filtros */
+.seccion-controles {
+    background: var(--color-blanco);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.controles-izquierdos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.control-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-grupo label {
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.control-grupo select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--color-blanco);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.control-grupo select:focus {
+    border-color: var(--color-azul-hover);
+}
+
+.controles-derechos {
+    display: flex;
+    gap: 12px;
+}
+
+/* Botones */
+.botn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botn-primario {
+    background: #28a745;
+    color: var(--color-blanco);
+}
+
+.botn-primario:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+}
+
+.botn-secundario {
+    background: #6c757d;
+    color: var(--color-blanco);
+}
+
+.botn-secundario:hover {
+    background: #5a6268;
+}
+
+/* Paneles de Datos Generales */
+.bloque-datos {
+    background: var(--color-blanco);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.bloque-titulo {
+    color: var(--color-primario);
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Panel de Supervisión */
+.panel-supervision {
+    border-left: 5px solid var(--color-coordinacion);
+}
+
+.supervision-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.supervision-tarjeta {
+    background: #f8fbff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e8eef6;
+}
+
+.supervision-tarjeta h4 {
+    margin-bottom: 12px;
+    color: var(--color-primario);
+    font-size: 1rem;
+}
+
+.supervision-tarjeta p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+/* Contenedor de Elementos de Aprobación */
+.lista-aprobaciones-elementos,
+.recomendaciones-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.aprobacion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: var(--color-blanco);
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.aprobacion-tipo {
+    color: var(--color-morado);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.aprobacion-estado {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Contenedor de Tarjetas ICR / KPIs */
+.icr-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.icr-tarjeta {
+    background: var(--color-blanco);
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icr-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.icr-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icr-cabecera h3 {
+    font-size: 1.05rem;
+    color: var(--color-primario);
+}
+
+.icr-valor {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin: 8px 0;
+}
+
+.icr-etiqueta {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.icr-detalle {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Tabla de Reportes */
+.tabla-desplazamiento {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+.tabla-reporte {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-blanco);
+}
+
+.tabla-reporte th {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 16px 18px;
+    text-align: left;
+}
+
+.tabla-reporte td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--color-borde);
+    font-size: 15px;
+}
+
+.tabla-reporte tbody tr {
+    transition: background 0.25s ease;
+}
+
+.tabla-reporte tbody tr:hover {
+    background: #f6f8fc;
+}
+
+.subtexto-actualizacion {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+/* Cuadrícula de Análisis de Módulos (Barras de Progreso) */
+.analisis-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.analisis-elemento {
+    background: #fdfdfd;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.analisis-elemento h4 {
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+
+.barra-progreso {
+    background: #e9ecef;
+    border-radius: 10px;
+    height: 12px;
+    margin: 10px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.progreso {
+    background: var(--color-azul-hover);
+    height: 100%;
+    transition: width 0.5s ease;
+    width: 0%; /* Manejado dinámicamente por JavaScript */
+}
+
+/* Recomendaciones */
+.recomendaciones-contenedor {
+    width: 100%;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos - Secretaria</title>
+    <link rel="stylesheet" href="./css-secre/documentosec.css">
+</head>
+<body>
+    <div class="contenedor">
+        <aside class="sidebar">
+            <h2>Secretaria</h2>
+            <ul>
+                <li class="menu-item"><a href="iniciosec.html">Inicio</a></li>
+                <li class="menu-item activo"><a href="documentosec.html">Documentos</a></li>
+                <li class="menu-item"><a href="agendasec.html">Agenda</a></li>
+                <li class="menu-item"><a href="reunionsec.html">Reuniones</a></li>
+                <li class="menu-item"><a href="cajachica.html">Caja Chica</a></li>
+                <li class="menu-item"><a href="reportesec.html">Reportes</a></li>
+                <li class="menu-item cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+        <main class="contenido">
+            <section class="cabecera">
+                <div class="cabecera-izquierda">
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1>Sistema de Gestión Institucional</h1>
+                        <p>Secretaría</p>
+                    </div>
+                </div>
+                <div class="cabecera-derecha">
+                    <p class="fecha">25 de Mayo de 2026</p>
+                    <p class="hora">09:45:30</p>
+                </div>
+            </section>
+            <section class="titulo-modulo">
+                <h1>Gestión de Documentos</h1>
+                <p>Registrar correspondencia, archivar documentos digitales y preparar información para el Director.</p>
+            </section>
+            <section class="panel">
+                <h2>Buscar Documento</h2>
+                <div class="busqueda">
+                    <input type="text" id="inputBuscarDoc" placeholder="Buscar por asunto, remitente o código">
+                    <button>Buscar</button>
+                </div>
+            </section>
+            <section class="panel">
+                <h2>Documentos por archivar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Asunto</th>
+                            <th>Remitente</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaDocumentosPendientes">
+                        <tr>
+                            <td>DOC-101</td>
+                            <td>Carta institucional</td>
+                            <td>Secretaría</td>
+                            <td>24/05/2026</td>
+                            <td>En proceso</td>
+                        </tr>
+                        <tr>
+                            <td>DOC-102</td>
+                            <td>Informe de agenda</td>
+                            <td>Administración</td>
+                            <td>25/05/2026</td>
+                            <td>Pendiente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="panel formulario-panel">
+                <h2>Registrar Correspondencia</h2>
+                <form id="formRegistrarDocumento">
+                    <div class="grupo-formulario">
+                        <label for="asuntoDoc">Asunto</label>
+                        <input type="text" id="asuntoDoc" placeholder="Asunto del documento">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="remitenteDoc">Remitente</label>
+                        <input type="text" id="remitenteDoc" placeholder="Nombre del remitente">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="fechaDoc">Fecha</label>
+                        <input type="date" id="fechaDoc">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="tipoDoc">Tipo de documento</label>
+                        <select id="tipoDoc">
+                            <option>Oficio</option>
+                            <option>Memorando</option>
+                            <option>Informe</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="archivoDoc">Archivo digital</label>
+                        <input type="file" id="archivoDoc">
+                    </div>
+                    <button type="submit" class="btn-registrar">Registrar</button>
+                </form>
+            </section>
+            <footer class="footer">
+                <p>© 2026 INSTTIC - Secretaria</p>
+            </footer>
+        </main>
+    </div>
+    <script src="./secre.js/documentosec.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Agenda</title>
+    <link rel="stylesheet" href="./css/agenda.css">
+</head>
+<body>
+    
+     <<div class="contenedor">
+
+    <!-- Menu lateral -->
+    <aside class="barra-lateral">
+        <h2>Director</h2>
+        <ul>
+            <li class="item-menu"><a href="inicio.html">Inicio</a></li>
+            <li class="item-menu"><a href="documentos.html">Documentos</a></li>
+            <li class="item-menu activo"><a href="agenda.html">Agenda</a></li>
+            <li class="item-menu"><a href="reunion.html">Reuniones</a></li>
+            <li class="item-menu"><a href="reportes.html">Reportes</a></li>
+            <li class="item-menu"><a href="supervision.html">Supervisión</a></li>
+            <li class="item-menu cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido">
+
+        <!-- CABECERA INSTITUCIONAL -->   
+        <section class="cabecera">
+            <div class="cabecera-izquierda">
+                <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                <div class="info-sistema">
+                    <h1>Sistema de Gestión Institucional</h1>
+                    <p>Dirección General</p>
+                </div>
+            </div>
+
+            <div class="cabecera-centro">
+                <div class="director-mini">
+                    <div class="avatar-mini"></div>
+                    <div>
+                        <h3>Director General</h3>
+                        <p>Bienvenido al Sistema</p>
+                        <span class="en-linea">● En línea</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecera-derecha">
+                <p class="fecha">25 de Mayo de 2026</p>
+                <p class="hora">09:45:30</p>
+            </div>
+        </section>
+
+        <!-- TÍTULO DEL MÓDULO -->
+        <section class="titulo-modulo">
+            <h1>Gestión de Agenda Institucional</h1>
+            <p>Revisa la agenda, coordina actividades y supervisa procesos administrativos</p>
+        </section>
+
+        <section class="panel panel-resumen">
+            <div class="resumen-agenda-cuadricula">
+                <div class="resumen-tarjeta">
+                    <h3>Actividades supervisadas</h3>
+                    <p id="kpi-supervision">0</p>
+                    <span>Seguimiento directo a eventos clave</span>
+                </div>
+                <div class="resumen-tarjeta">
+                    <h3>Procesos administrativos</h3>
+                    <p id="procesos-admin">0</p>
+                    <span>Procesos en gestión por el Director</span>
+                </div>
+                <div class="resumen-tarjeta">
+                    <h3>Coordinación interdepartamental</h3>
+                    <p id="coord-actividades">0</p>
+                    <span>Acciones conjuntas entre departamentos</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Próximas Actividades</h2>
+            <div class="proximas-actividades" id="listaProximasActividades">
+                <p class="sin-datos">Cargando próximas actividades...</p>
+            </div>
+        </section>
+
+        <section class="panel panel-coordinacion">
+            <h2>Coordinación de Procesos</h2>
+            <div class="coordinacion-lista" id="listaCoordinacion">
+                <p class="sin-datos">Cargando procesos de coordinación...</p>
+            </div>
+        </section>
+
+        <!-- PANEL DE ACTIVIDADES PROGRAMADAS -->
+        <section class="panel">
+            <div class="panel-cabecera">
+                <h2>Actividades Programadas</h2>
+                <div class="filtros-actividades">
+                    <input type="text" placeholder="Buscar por descripción o lugar" class="filtro-busqueda">
+                    <select class="filtro-estado">
+                        <option value="">Todos los estados</option>
+                        <option value="confirmada">Confirmada</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="cancelada">Cancelada</option>
+                    </select>
+                </div>
+            </div>
+
+            <table class="tabla-actividades">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Descripción</th>
+                        <th>Lugar</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!--pie de pagina -->
+        <footer class="pie-pagina">
+            <div class="item-pie marca-pie">
+                <p>© 2026 INSTTIC - Instituto Superior de Telecomunicaciones</p>
+            </div>
+            <div class="item-pie sitio-pie">
+                <p>Sistema de Gestión Institucional</p>
+            </div>
+            <div class="item-pie derechos-pie">
+                <p>Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </main>
+</div>
+
+    <script src="./js/agenda.js"></script>
+</body>
+</html>

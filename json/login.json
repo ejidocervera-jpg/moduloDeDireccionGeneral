@@ -1,0 +1,16 @@
+[
+  {
+    "usuario": "director",
+    "contraseña": "dir123",
+    "nombre": "Director General",
+    "rol": "director",
+    "panel": "inicio.html"
+  },
+  {
+    "usuario": "secretaria",
+    "contraseña": "sec1234",
+    "nombre": "Secretaría",
+    "rol": "secretaria",
+    "panel": "iniciosec.html"
+  }
+]

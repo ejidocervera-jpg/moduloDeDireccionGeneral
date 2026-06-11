@@ -1,0 +1,13 @@
+{
+  "indicadores": {
+    "documentos": "12 archivados",
+    "agenda": "8 eventos programados",
+    "reuniones": "5 solicitudes",
+    "caja": "$ 3,450.00"
+  },
+  "reportesRecientes": [
+    { "titulo": "Reporte de documentos", "fecha": "24/05/2026" },
+    { "titulo": "Reporte de caja chica", "fecha": "23/05/2026" },
+    { "titulo": "Reporte de reuniones", "fecha": "22/05/2026" }
+  ]
+}

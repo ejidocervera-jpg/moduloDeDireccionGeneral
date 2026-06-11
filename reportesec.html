@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Secretaria</title>
+    <link rel="stylesheet" href="./css-secre/reportesec.css">
+</head>
+<body>
+    <div class="contenedor">
+        <aside class="sidebar">
+            <h2>Secretaria</h2>
+            <ul>
+                <li class="menu-item"><a href="iniciosec.html">Inicio</a></li>
+                <li class="menu-item"><a href="documentosec.html">Documentos</a></li>
+                <li class="menu-item"><a href="agendasec.html">Agenda</a></li>
+                <li class="menu-item"><a href="reunionsec.html">Reuniones</a></li>
+                <li class="menu-item"><a href="cajachica.html">Caja Chica</a></li>
+                <li class="menu-item activo"><a href="reportesec.html">Reportes</a></li>
+                <li class="menu-item cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+        <main class="contenido">
+            <section class="cabecera">
+                <div class="cabecera-izquierda">
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1>Sistema de Gestión Institucional</h1>
+                        <p>Secretaría</p>
+                    </div>
+                </div>
+                <div class="cabecera-derecha">
+                    <p class="fecha">25 de Mayo de 2026</p>
+                    <p class="hora">09:45:30</p>
+                </div>
+            </section>
+            <section class="titulo-modulo">
+                <h1>Reportes Administrativos</h1>
+                <p>Genera y consulta reportes de caja chica, documentos, reuniones y agenda institucional.</p>
+            </section>
+            <section class="panel indicadores-reportes">
+                <div class="card">
+                    <h3>Documentos</h3>
+                    <p>12 archivados</p>
+                </div>
+                <div class="card">
+                    <h3>Agenda</h3>
+                    <p>8 eventos programados</p>
+                </div>
+                <div class="card">
+                    <h3>Reuniones</h3>
+                    <p>5 solicitudes</p>
+                </div>
+                <div class="card">
+                    <h3>Caja Chica</h3>
+                    <p>$ 3,450.00</p>
+                </div>
+            </section>
+            <section class="panel formulario-panel">
+                <h2>Generar reporte</h2>
+                <form id="formReporteSec">
+                    <div class="grupo-formulario">
+                        <label for="tipoReporte">Tipo de reporte</label>
+                        <select id="tipoReporte">
+                            <option>Documento</option>
+                            <option>Agenda</option>
+                            <option>Reuniones</option>
+                            <option>Caja Chica</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="periodoReporte">Período</label>
+                        <input type="month" id="periodoReporte">
+                    </div>
+                    <button type="submit" class="btn-registrar">Generar reporte</button>
+                </form>
+            </section>
+            <section class="panel">
+                <h2>Reportes recientes</h2>
+                <ul class="lista-reportes" id="listaReportesRecientes">
+                    <li>Reporte de documentos - 24/05/2026</li>
+                    <li>Reporte de caja chica - 23/05/2026</li>
+                    <li>Reporte de reuniones - 22/05/2026</li>
+                </ul>
+            </section>
+            <footer class="footer">
+                <p>© 2026 INSTTIC - Secretaria</p>
+            </footer>
+        </main>
+    </div>
+    <script src="./secre.js/reportesec.js"></script>
+</body>
+</html>

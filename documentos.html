@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestion de documentos</title>
+    <link rel="stylesheet" href="./css/documentos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <!-- Menu lateral -->
+
+        <aside class="sidebar">
+
+            <h2>Director</h2>
+            <ul>
+                <li class="menu-item"><a href="inicio.html">Inicio</a></li>
+                <li class="menu-item"><a href="documentos.html">Documentos</a></li>
+                <li class="menu-item activo"><a href="agenda.html">Agenda</a></li>
+                <li class="menu-item"><a href="reunion.html">Reuniones</a></li>
+                <li class="menu-item"><a href="reportes.html">Reportes</a></li>
+                <li class="menu-item"><a href="supervision.html">Supervisión</a></li>
+                <li class="menu-item cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+           </ul>
+
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="contenido">
+
+            <!-- CABECERA INSTITUCIONAL -->
+
+            <section class="cabecera">
+
+                <div class="cabecera-izquierda">
+
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+
+                    <div class="info-sistema">
+
+                        <h1>
+                            Sistema de Gestión Institucional
+                        </h1>
+
+                        <p>
+                            Dirección General
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="cabecera-centro">
+
+                    <div class="director-mini">
+
+                        <div class="avatar-mini">
+
+
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Director General
+                            </h3>
+
+                            <p>
+                                Bienvenido al Sistema
+                            </p>
+
+                            <span class="online">
+                                ● En línea
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="cabecera-derecha">
+
+                    <p class="fecha">
+                        25 de Mayo de 2026
+                    </p>
+
+                    <p class="hora">
+                        09:45:30
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="titulo-modulo">
+
+                <h1>
+                    Gestión De Documentos y Contratos
+                </h1>
+
+                <p>
+                    Consulta, aprobación y seguimiento de documentos
+                </p>
+
+            </section>
+
+            <section class="panel">
+
+                <h2>
+                    Buscar Documento
+                </h2>
+
+                <div class="busqueda">
+
+                    <input type="text" id="inputBuscar" placeholder="Buscar por asunto, remitente o código">
+
+                    <button>
+
+                        Buscar
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- PANEL DE DOCUMENTOS PENDIENTES -->
+            <section class="panel">
+
+                <h2>
+                    Documentos Pendientes de Aprobación
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Código</th>
+
+                            <th>Asunto</th>
+
+                            <th>Remitente</th>
+
+                            <th>Fecha</th>
+
+                            <th>Estado</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaPendientes">
+
+                        <tr>
+
+                            <td>DOC-001</td>
+
+                            <td>Solicitud de Compra</td>
+
+                            <td>Administración</td>
+
+                            <td>20/05/2026</td>
+
+                            <td class="estado-pendiente">
+                                Pendiente
+                            </td>
+
+                            <td>
+
+                                <button class="btn-ver">
+                                    Ver
+                                </button>
+
+                                <button class="btn-aprobar">
+                                    Aprobar
+                                </button>
+
+                                <button class="btn-rechazar">
+                                    Rechazar
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>DOC-002</td>
+
+                            <td>Informe de Actividades</td>
+
+                            <td>Académico</td>
+
+                            <td>22/05/2026</td>
+
+                            <td class="estado-pendiente">
+                                Pendiente
+                            </td>
+
+                            <td>
+
+                                <button class="btn-ver">
+                                    Ver
+                                </button>
+
+                                <button class="btn-aprobar">
+                                    Aprobar
+                                </button>
+
+                                <button class="btn-rechazar">
+                                    Rechazar
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>DOC-003</td>
+
+                            <td>Contrato de Servicios</td>
+
+                            <td>Finanzas</td>
+
+                            <td>23/05/2026</td>
+
+                            <td class="estado-pendiente">
+                                Pendiente
+                            </td>
+
+                            <td>
+
+                                <button class="btn-ver">
+                                    Ver
+                                </button>
+
+                                <button class="btn-aprobar">
+                                    Aprobar
+                                </button>
+
+                                <button class="btn-rechazar">
+                                    Rechazar
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>DOC-004</td>
+
+                            <td>Solicitud de Vacaciones</td>
+
+                            <td>Secretaría</td>
+
+                            <td>24/05/2026</td>
+
+                            <td class="estado-pendiente">
+                                Pendiente
+                            </td>
+
+                            <td>
+
+                                <button class="btn-ver">
+                                    Ver
+                                </button>
+
+                                <button class="btn-aprobar">
+                                    Aprobar
+                                </button>
+
+                                <button class="btn-rechazar">
+                                    Rechazar
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- PANEL DE DOCUMENTOS APROBADOS -->
+            <section class="panel">
+
+                <h2>
+                    Documentos Aprobados
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Código</th>
+                            <th>Asunto</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaAprobados">
+
+                        <tr>
+                            <td>DOC-010</td>
+                            <td>Informe Académico</td>
+                            <td>15/05/2026</td>
+                            <td class="estado-aprobado">
+                                Aprobado
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>DOC-011</td>
+                            <td>Contrato de Mantenimiento</td>
+                            <td>18/05/2026</td>
+                            <td class="estado-aprobado">
+                                Aprobado
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>DOC-012</td>
+                            <td>Solicitud de Permiso</td>
+                            <td>19/05/2026</td>
+                            <td class="estado-aprobado">
+                                Aprobado
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!--  ARCHIVOS DOCUMENTALES -->
+
+            <section class="panel">
+
+                <h2>
+                    Archivo Documental
+                </h2>
+
+                <div class="archivo-grid">
+
+                    <div class="archivo-card">
+
+                        Año 2026
+
+                    </div>
+
+                    <div class="archivo-card">
+
+                        Año 2025
+
+                    </div>
+
+                    <div class="archivo-card">
+
+                        Año 2024
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- PANEL DE CONTRATOS DE PROFESORES -->
+            <section class="panel">
+
+                <h2>
+                    Contratos de Profesores
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Profesor</th>
+
+                            <th>Departamento</th>
+
+                            <th>Inicio</th>
+
+                            <th>Vencimiento</th>
+
+                            <th>Estado</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaProfesores">
+
+                        <tr>
+
+                            <td>Urbamo tomas</td>
+
+                            <td>direccion academica</td>
+
+                            <td>01/01/2026</td>
+
+                            <td>31/12/2026</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Fermin Copoború</td>
+
+                            <td>direccion academica</td>
+
+                            <td>01/02/2026</td>
+
+                            <td>31/01/2027</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>Prisco Calletano</td>
+
+                            <td>direccion academica</td>
+
+                            <td>01/03/2026</td>
+
+                            <td>28/02/2027</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- PANEL DE CONTRATOS DEL PERSONAL ADMINISTRATIVO -->
+
+            <section class="panel">
+
+                <h2>
+                    Contratos del Personal Administrativo
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Empleado</th>
+
+                            <th>Cargo</th>
+
+                            <th>Inicio</th>
+
+                            <th>Vencimiento</th>
+
+                            <th>Estado</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaPersonal">
+
+                        <tr>
+
+                            <td>Cristela Inchama</td>
+
+                            <td>Secretaria</td>
+
+                            <td>15/02/2026</td>
+
+                            <td>15/02/2027</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Rafael Copoború</td>
+
+                            <td>Jefe de Finanzas</td>
+
+                            <td>01/01/2026</td>
+
+                            <td>31/12/2026</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Pablo Cono</td>
+                            <td>Secretario General</td>
+                            <td>01/03/2026</td>
+                            <td>28/02/2027</td>
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>ROsalinda Ondo</td>
+                            <td>Secretaria Academica</td>
+                            <td>01/04/2026</td>
+                            <td>31/03/2027</td>
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Rigoberto Pestana</td>
+                            <td>Director academico</td>
+                            <td>01/05/2026</td>
+                            <td>30/04/2027</td>
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <section class="panel">
+
+                <h2>
+                    Contratos Empresas de Servicios
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Empresa</th>
+
+                            <th>Servicio</th>
+
+                            <th>Inicio</th>
+
+                            <th>Vencimiento</th>
+
+                            <th>Estado</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaEmpresas">
+
+                        <tr>
+
+                            <td>SegurOyala</td>
+
+                            <td>Seguridad</td>
+
+                            <td>01/01/2026</td>
+
+                            <td>31/12/2026</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>LimpiAñisok</td>
+
+                            <td>Limpieza</td>
+
+                            <td>01/02/2026</td>
+
+                            <td>31/01/2027</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>ComidaOyalaPueblo</td>
+
+                            <td>Alimentación</td>
+
+                            <td>01/03/2026</td>
+
+                            <td>28/02/2027</td>
+
+                            <td class="estado-activo">
+                                Activo
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!--HISTORIAL -->
+
+            <section class="panel">
+
+                <h2>
+                    Historial de Actividades
+                </h2>
+
+                <ul class="historial" id="listaHistorial">
+
+                    <li>
+                        DOC-010 aprobado - 15/05/2026
+                    </li>
+
+                    <li>
+                        Contrato renovado - 18/05/2026
+                    </li>
+
+                    <li>
+                        Documento archivado - 20/05/2026
+                    </li>
+
+                    <li>
+                        Contrato vencido - 25/05/2026
+                    </li>
+
+                    <li>
+                        Documento rechazado - 26/05/2026
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!--pie de pagina -->
+
+            <footer class="footer">
+                <div class="footer-item footer-brand">
+                    <p>© 2026 INSTTIC - Instituto Superior de Telecomunicaciones</p>
+                </div>
+                <div class="footer-item footer-site">
+                    <p>Sistema de Gestión Institucional</p>
+                </div>
+                <div class="footer-item footer-rights">
+                    <p>Todos los derechos reservados</p>
+                </div>
+            </footer>
+
+            <script src="./js/documento.js"></script>
+</body>
+
+</html>

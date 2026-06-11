@@ -1,0 +1,38 @@
+{
+
+"pendientes": [
+    { "codigo": "DOC-001", "asunto": "Solicitud de Compra", "remitente": "Administración", "fecha": "20/05/2026", "estado": "Pendiente" },
+    { "codigo": "DOC-002", "asunto": "Informe de Actividades", "remitente": "Académico", "fecha": "22/05/2026", "estado": "Pendiente" },
+    { "codigo": "DOC-003", "asunto": "Contrato de Servicios", "remitente": "Finanzas", "fecha": "23/05/2026", "estado": "Pendiente" },
+    { "codigo": "DOC-004", "asunto": "Solicitud de Vacaciones", "remitente": "Secretaría", "fecha": "24/05/2026", "estado": "Pendiente" }
+  ],
+  "aprobados": [
+    { "codigo": "DOC-010", "asunto": "Informe Académico", "fecha": "15/05/2026", "estado": "Aprobado" },
+    { "codigo": "DOC-011", "asunto": "Contrato de Mantenimiento", "fecha": "18/05/2026", "estado": "Aprobado" },
+    { "codigo": "DOC-012", "asunto": "Solicitud de Permiso", "fecha": "19/05/2026", "estado": "Aprobado" }
+  ],
+  "profesores": [
+    { "nombre": "Urbano Tomás", "departamento": "Dirección Académica", "inicio": "01/01/2026", "vencimiento": "31/12/2026", "estado": "Activo" },
+    { "nombre": "Fermín Copoború", "departamento": "Dirección Académica", "inicio": "02/02/2026", "vencimiento": "31/01/2027", "estado": "Activo" },
+    { "nombre": "Prisco Cayetano", "departamento": "Dirección Académica", "inicio": "01/03/2026", "vencimiento": "28/02/2027", "estado": "Activo" }
+  ],
+  "personal": [
+    { "nombre": "Cristela Inchama", "cargo": "Secretaria", "inicio": "15/02/2026", "vencimiento": "15/02/2027", "estado": "Activo" },
+    { "nombre": "Rafael Copoború", "cargo": "Jefe de Finanzas", "inicio": "01/01/2026", "vencimiento": "31/12/2026", "estado": "Activo" },
+    { "nombre": "Pablo Cono", "cargo": "Secretario General", "inicio": "01/03/2026", "vencimiento": "28/02/2027", "estado": "Activo" },
+    { "nombre": "Rosalinda Ondo", "cargo": "Secretaria Académica", "inicio": "01/04/2026", "vencimiento": "31/03/2027", "estado": "Activo" },
+    { "nombre": "Rigoberto Pestana", "cargo": "Director Académico", "inicio": "01/05/2026", "vencimiento": "30/04/2027", "estado": "Activo" }
+  ],
+  "empresas": [
+    { "nombre": "SegurOyala", "servicio": "Seguridad", "inicio": "01/01/2026", "vencimiento": "31/12/2026", "estado": "Activo" },
+    { "nombre": "LimpiAñisok", "servicio": "Limpieza", "inicio": "01/02/2026", "vencimiento": "31/01/2027", "estado": "Activo" },
+    { "nombre": "ComidaOyalaPueblo", "servicio": "Alimentación", "inicio": "01/03/2026", "vencimiento": "28/02/2027", "estado": "Activo" }
+  ],
+  "historial": [
+    "DOC-010 aprobado - 15/05/2026",
+    "Contrato renovado - 18/05/2026",
+    "Documento archivado - 20/05/2026",
+    "Contrato vencido - 25/05/2026",
+    "Documento rechazado - 26/05/2026"
+  ]
+}

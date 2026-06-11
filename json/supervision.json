@@ -1,0 +1,17 @@
+{
+    "solicitudesSupervision": [
+        { "id": 1, "asunto": "Aprobación de presupuesto de actividades", "origen": "Finanzas", "estado": "Pendiente" },
+        { "id": 2, "asunto": "Informe de cumplimiento normativo", "origen": "Control Interno", "estado": "En revisión" },
+        { "id": 3, "asunto": "Solicitud de acta de reunión urgente", "origen": "Secretaría General", "estado": "Pendiente" }
+    ],
+    "procesosSupervision": [
+        { "proceso": "Plan de mejoramiento institucional", "responsable": "Dirección Académica", "avance": 72, "estado": "En curso", "fecha": "15/06/2026" },
+        { "proceso": "Reestructuración de áreas administrativas", "responsable": "Recursos Humanos", "avance": 45, "estado": "Revisión", "fecha": "30/06/2026" },
+        { "proceso": "Evaluación de convenios externos", "responsable": "Relaciones Institucionales", "avance": 58, "estado": "En curso", "fecha": "20/06/2026" }
+    ],
+    "recomendacionesSupervision": [
+        "Prioriza la aprobación de solicitudes de presupuesto para garantizar el seguimiento de actividades clave.",
+        "Solicita informe de avances al área de Recursos Humanos antes del cierre del mes.",
+        "Revisa las actas de reuniones previas antes de autorizar nuevas convocatorias institucionales."
+    ]
+}

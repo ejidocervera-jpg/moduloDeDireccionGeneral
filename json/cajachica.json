@@ -1,0 +1,7 @@
+{
+  "saldo": 3450.00,
+  "movimientos": [
+    { "fecha": "24/05/2026", "tipo": "Egreso", "descripcion": "Compra de papelería", "monto": 150.00, "saldo": 3300.00 },
+    { "fecha": "23/05/2026", "tipo": "Ingreso", "descripcion": "Reembolso por evento", "monto": 200.00, "saldo": 3450.00 }
+  ]
+}

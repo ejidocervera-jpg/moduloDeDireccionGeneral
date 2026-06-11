@@ -1,0 +1,38 @@
+{
+  "datosReporte": {
+    "caja": {
+      "saldo": 45500,
+      "movimientos": [
+        { "tipo": "Egreso", "descripcion": "Insumos de oficina", "monto": 15000 },
+        { "tipo": "Egreso", "descripcion": "Reparación cerradura", "monto": 8500 },
+        { "tipo": "Egreso", "descripcion": "Mantenimiento eléctrico", "monto": 5000 }
+      ]
+    },
+    "documentos": [
+      { "tipo": "Oficio", "tema": "Aprobación de becas", "estado": "completado" },
+      { "tipo": "Circular", "tema": "Aviso de feriado", "estado": "completado" },
+      { "tipo": "Memorándum", "tema": "Cambio de horarios", "estado": "completado" },
+      { "tipo": "Carta", "tema": "Correspondencia externa", "estado": "completado" }
+    ],
+    "reuniones": [
+      { "tipo": "Consejo", "tema": "Evaluación docente", "asistentes": 10 },
+      { "tipo": "Cita", "tema": "Delegación ministerial", "asistentes": 5 },
+      { "tipo": "Sesión", "tema": "Plan operativo", "asistentes": 12 }
+    ],
+    "actividades": [
+      { "nombre": "Capacitación docente", "participantes": 35 },
+      { "nombre": "Charla institucional", "participantes": 120 },
+      { "nombre": "Jornada de planificación", "participantes": 40 }
+    ]
+  },
+  "aprobacionesPendientes": [
+    { "tipo": "Documento", "nombre": "Plan de Supervisión 2026", "estado": "Pendiente" },
+    { "tipo": "Proceso", "nombre": "Aprobación de presupuesto", "estado": "En revisión" },
+    { "tipo": "Documento", "nombre": "Informe de logística", "estado": "Pendiente" }
+  ],
+  "procesosAdministrativos": [
+    { "nombre": "Gestión de contratación", "estado": "Activo" },
+    { "nombre": "Auditoría interna", "estado": "En curso" },
+    { "nombre": "Coordinación interdepartamental", "estado": "Revisión" }
+  ]
+}

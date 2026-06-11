@@ -1,0 +1,62 @@
+
+{
+  "actividades": [
+    {
+      "id": "ACT-001",
+      "fecha": "29/05/2026",
+      "hora": "14:30",
+      "descripcion": "Reunión de Junta Directiva",
+      "lugar": "Sala de Conferencias A",
+      "estado": "confirmada"
+    },
+    {
+      "id": "ACT-002",
+      "fecha": "26/05/2026",
+      "hora": "10:00",
+      "descripcion": "Evaluación de Desempeño",
+      "lugar": "Oficina Dirección General",
+      "estado": "pendiente"
+    },
+    {
+      "id": "ACT-003",
+      "fecha": "01/06/2026",
+      "hora": "09:00",
+      "descripcion": "Sesión de Planificación Strategica",
+      "lugar": "Sala de Juntas",
+      "estado": "pendiente"
+    },
+    {
+      "id": "ACT-004",
+      "fecha": "28/05/2026",
+      "hora": "16:00",
+      "descripcion": "Sesión de Coordinación Administrativa",
+      "lugar": "Sala Virtual - Teams",
+      "estado": "pendiente"
+    },
+    {
+      "id": "ACT-005",
+      "fecha": "02/06/2026",
+      "hora": "11:00",
+      "descripcion": "Supervisión de Procesos Académicos",
+      "lugar": "Oficina Dirección General",
+      "estado": "confirmada"
+    }
+  ],
+  "coordinacionDirector": [
+    { 
+      "titulo": "Planificación interdepartamental", 
+      "descripcion": "Coordinar reuniones entre administración y académica.", 
+      "estado": "En curso" 
+    },
+    { 
+      "titulo": "Seguimiento de procesos", 
+      "descripcion": "Supervisar trámites administrativos clave.", 
+      "estado": "Pendiente" 
+    },
+    { 
+      "titulo": "Aprobaciones de agenda", 
+      "descripcion": "Revisar solicitudes de eventos y reuniones.", 
+      "estado": "Revisión" 
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "solicitudes": [
+    { "tema": "Reunión de seguimiento", "origen": "Dirección Académica", "fecha": "28/05/2026" },
+    { "tema": "Convocatoria de presupuesto", "origen": "Finanzas", "fecha": "29/05/2026" }
+  ],
+  "reuniones": [
+    { "fecha": "30/05/2026", "hora": "10:00", "tema": "Revisión de actas", "participantes": "Director, Secretaría, Finanzas" }
+  ]
+}

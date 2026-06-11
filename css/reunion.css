@@ -1,0 +1,736 @@
+/* MAQUETACIÓN GENERAL*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6f9;
+color:#333;
+}
+
+.contenedor{
+display:flex;
+min-height:100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #003366; /* Color plano de agenda, sin el degradado */
+    color: white;
+    padding: 25px; /* Ajustado al padding de agenda */
+    position: fixed;
+    border-radius: 12px; /* Añadido de agenda */
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px; /* Tamaño de letra de agenda */
+    font-weight: bold;
+    /* Eliminado el borde inferior que no tenía agenda */
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu-item {
+    padding: 15px; /* Copiado del li de agenda */
+    margin-bottom: 12px; /* Copiado de agenda */
+    border-radius: 10px; /* Copiado de agenda */
+    transition: 0.3s; /* Tiempo de transición de agenda */
+}
+
+.menu-item a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    font-size: 20px; /* Tamaño de letra de agenda */
+}
+
+
+.menu-item:hover,
+.menu-item.activo {
+    background: #0056b3;
+    transform: translateX(5px);
+    text-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.menu-item.activo a {
+    font-weight: bold;
+}
+
+/* Botón de cerrar sesión con el color rojo normal y visible de agenda */
+.menu-item.cerrar-sesion {
+    background: #dc3545 !important;
+    /* Eliminado el borde superior y márgenes extra para mantener el formato limpio */
+}
+
+.menu-item.cerrar-sesion a {
+    color: white !important;
+}
+
+.menu-item.cerrar-sesion:hover {
+    background: #b52b3a !important;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido {
+    margin-left: 260px;
+    padding: 30px;
+    padding-top: 220px;
+    padding-bottom: 180px;
+    width: 100%;
+}
+
+/*CABECERA INSTITUCIONAL */
+
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    z-index: 20;
+}
+
+.cabecera-izquierda,
+.cabecera-centro,
+.cabecera-derecha {
+    flex: 1;
+}
+
+.cabecera-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera-derecha {
+    text-align: right;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecera-izquierda .info-sistema {
+    max-width: calc(100% - 110px);
+}
+
+.cabecera h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.cabecera p {
+    color: #444;
+    font-size: 18px;
+}
+
+.cabecera .director-mini {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cabecera .avatar-mini {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #dce6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.cabecera .director-mini h3 {
+    color: #003366;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.cabecera .director-mini p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.cabecera .online {
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.director-mini h3 {
+    font-size: 0.95rem;
+    color: #1a3a52;
+    margin: 0;
+}
+
+.director-mini p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+}
+
+.online {
+    display: block;
+    font-size: 0.7rem;
+    color: #4caf50;
+    margin-top: 2px;
+}
+
+.cabecera-derecha {
+    text-align: right;
+}
+
+.fecha, .hora {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #1a3a52;
+}
+
+.hora {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/*TÍTULO DEL MÓDULO */
+
+.titulo-modulo {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.titulo-modulo h1 {
+    font-size: 28px;
+    color: #003366;
+    margin: 0 0 10px 0;
+}
+
+.titulo-modulo p {
+    color: #666;
+    margin: 0;
+    font-size: 16px;
+}
+
+/*ÁREA PRINCIPAL CON DOS COLUMNAS */
+
+.agenda-principal {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+}
+
+.columna-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.columna-derecha {
+    display: flex;
+    flex-direction: column;
+}
+
+/*PANELES*/
+
+.panel {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+    border-left: none;
+}
+
+.panel h2 {
+    color: #003366;
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.panel-formulario {
+    flex: 1;
+}
+
+.panel-header {
+    margin-bottom: 20px;
+}
+
+.panel-header h2 {
+    display: inline-block;
+    margin: 0 0 15px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/*CALENDARIO*/
+
+.calendario {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0056b3;
+}
+
+.mes-anterior, .mes-siguiente {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.mes-anterior:hover, .mes-siguiente:hover {
+    background-color: #003f88;
+}
+
+.mes-actual {
+    font-weight: bold;
+    color: #003366;
+    font-size: 15px;
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.dia-semana {
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+.dias-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.dias-calendario div {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 13px;
+}
+
+.dias-calendario div:hover {
+    background-color: #e3f2fd;
+    border-color: #0056b3;
+}
+
+.dias-calendario div.activo {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+    font-weight: bold;
+}
+
+/*PRÓXIMAS ACTIVIDADES */
+
+.proximas-actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.actividad-item {
+    background-color: #f9f9f9;
+    border-left: 3px solid #0056b3;
+    padding: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.actividad-item:hover {
+    background-color: #e3f2fd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actividad-fecha {
+    font-size: 12px;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.actividad-titulo {
+    font-size: 15px;
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.actividad-hora {
+    font-size: 12px;
+    color: #666;
+}
+
+/*FORMULARIO */
+
+.formulario-actividad {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-formulario label {
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea,
+.grupo-formulario select {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus,
+.grupo-formulario select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.grupo-formulario textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.grupo-formulario select {
+    cursor: pointer;
+}
+
+.grupo-formulario option {
+    padding: 8px;
+}
+
+/*BOTONES*/
+
+.btn-registrar, .btn-limpiar {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-registrar {
+    background-color: #0056b3;
+    color: white;
+    flex: 1;
+}
+
+.btn-registrar:hover {
+    background-color: #003f88;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+}
+
+.btn-registrar:active {
+    transform: scale(0.98);
+}
+
+.btn-limpiar {
+    background-color: #e0e0e0;
+    color: #1a3a52;
+    flex: 1;
+}
+
+.btn-limpiar:hover {
+    background-color: #d0d0d0;
+}
+
+.btn-registrar, .btn-limpiar {
+    display: inline-block;
+}
+
+/*TABLA DE REUNIONES */
+
+.filtros-actividades {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.filtro-busqueda {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.filtro-estado {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.tabla-actividades {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabla-actividades thead {
+    background-color: #003366;
+    color: white;
+}
+
+.tabla-actividades th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2px solid #0056b3;
+}
+
+.tabla-actividades tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.tabla-actividades tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.tabla-actividades td {
+    padding: 15px;
+    font-size: 15px;
+}
+
+.tabla-actividades tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/*ESTADOS*/
+
+.estado {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.estado-convocada {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.estado-pendiente {
+    background-color: #fff9c4;
+    color: #f57f17;
+}
+
+.estado-cancelada {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.estado-aprobada {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+/* ACCIONES */
+
+.acciones {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-accion {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-editar {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #1976d2;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+.btn-aprobar {
+    background-color: #0056b3;
+    color: white;
+}
+
+.btn-aprobar:hover {
+    background-color: #003f88;
+}
+
+.panel-supervision {
+    border-left-color: #003366;
+    border-left: 4px solid #003366;
+}
+
+.solicitudes-lista {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.solicitud-item {
+    background: #f5f7fb;
+    border: 1px solid #dfe7ee;
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.solicitud-item strong {
+    display: block;
+    color: #003366;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.solicitud-item p {
+    margin: 0;
+    color: #637381;
+    font-size: 13px;
+}
+
+.solicitud-item .estado-badge {
+    background-color: #fdd835;
+    color: #5d4037;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    color: #666;
+};
+
+
+/*RESPONSIVE*/
+

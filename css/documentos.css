@@ -1,0 +1,372 @@
+/* ============================================================================
+   ESTILOS GLOBALES E INTERFAZ BASE
+   ============================================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENÚ LATERAL (Idéntico a Agenda) */
+.sidebar {
+    width: 260px;
+    background: #003366;
+    color: white;
+    padding: 25px;
+    position: fixed;
+    border-radius: 12px;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.activo {
+    background: #0056b3;
+    transform: translateX(5px);
+    text-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.sidebar ul li.activo a {
+    font-weight: bold;
+}
+
+.cerrar,
+.cerrar-sesion {
+    background: #dc3545 !important;
+}
+
+.cerrar:hover,
+.cerrar-sesion:hover {
+    background: #b52b3a !important;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido {
+    margin-left: 260px;
+    padding: 30px;
+    padding-top: 220px;
+    padding-bottom: 180px;
+    width: 100%;
+}
+
+/* CABECERA INSTITUCIONAL */
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    z-index: 20;
+}
+
+.cabecera-izquierda,
+.cabecera-centro,
+.cabecera-derecha {
+    flex: 1;
+}
+
+.cabecera-centro { 
+    display: flex;
+     justify-content: center; 
+     align-items: center; 
+    }
+.cabecera-derecha { 
+    text-align: right;
+ }
+.logo {
+     width: 90px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover; 
+    }
+
+.cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecera-izquierda .info-sistema {
+    max-width: calc(100% - 110px);
+}
+
+.cabecera h1 {
+     font-size: 28px;
+     margin-bottom: 8px;
+     }
+.cabecera p {
+     color: #444;
+     font-size: 18px; 
+    }
+
+.cabecera .director-mini {
+     display: flex; 
+     align-items: center;
+     gap: 15px; 
+    }
+.cabecera .avatar-mini {
+    width: 65px;
+    height: 65px;
+     border-radius: 50%;
+    background: #dce6f8;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    font-size: 30px;
+}
+
+.cabecera .director-mini h3 {
+     color: #003366;
+     font-size: 22px;
+     margin-bottom: 5px; 
+    }
+.cabecera .director-mini p { 
+    color: #555;
+    margin-bottom: 5px; 
+    }
+.cabecera .online {
+     color: green; 
+     font-weight: bold;
+    font-size: 14px; 
+    }
+
+
+
+/* TÍTULO DEL MÓDULO */
+.titulo-modulo {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.titulo-modulo h1 {
+     color: #003366;
+      margin-bottom: 8px;
+     }
+.titulo-modulo p { 
+    color: #666; 
+    font-size: 16px; 
+}
+
+/* PANELES DE TRABAJO */
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.panel h2 {
+    color: #003366;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+/* SECCIÓN BUSCADOR */
+.busqueda {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.busqueda input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.busqueda button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.busqueda button:hover {
+    background: #003f88;
+}
+
+/* TABLA DE FLUJO DOCUMENTAL */
+.panel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    cursor: default;
+}
+
+.panel th {
+    background: #003366;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.panel td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.panel tr:hover {
+    background: #f8f9fa;
+}
+
+/* BOTONES DE OPERACIÓN DOCUMENTAL */
+.btn-ver, .btn-aprobar, .btn-rechazar {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn-ver { 
+    background: #17a2b8;
+ }
+.btn-aprobar { 
+    background: #28a745;
+ }
+.btn-rechazar {
+     background: #dc3545; 
+    }
+
+.btn-ver:hover, .btn-aprobar:hover, .btn-rechazar:hover {
+    opacity: 0.7; /*  Estoy Suavizado el efecto hover anterior  con opacity*/
+}
+
+/* ARCHIVO DIGITAL DE EXPEDIENTES (GRID) */
+.archivo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.archivo-card {
+    background: #f4f6f9;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    border-left: 5px solid #003366;
+}
+
+.archivo-card:hover {
+    transform: translateY(-5px);
+    background: #e9eef5;
+}
+
+/* HISTORIAL LOG */
+.historial { list-style: none; }
+.historial li {
+    padding: 12px;
+    border-left: 4px solid #0056b3;
+    background: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+/* ESTADOS */
+.estado-activo, .estado-aprobado {
+     color: #28a745;
+      font-weight: bold;
+     }
+.estado-pendiente {
+     color: #ff9800;
+      font-weight: bold; 
+    }
+
+/*PIE DE PÁGINA  */
+.footer {
+    position: static; /* Cambiado de fixed a static para no colapsar */
+    background: #003366;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    z-index: 20;
+}
+
+.footer-item { 
+    min-width: 180px;
+     flex: 1;
+     }
+.footer-brand { 
+    flex: 2;
+ }
+.footer-site, .footer-rights {
+     text-align: center; 
+    }
+.footer-item p { 
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px; 
+    }
+

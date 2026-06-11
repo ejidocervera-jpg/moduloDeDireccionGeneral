@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reuniones</title>
+    <link rel="stylesheet" href="./css/reunion.css">
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <!-- Menu lateral -->
+        <aside class="sidebar">
+            <h2>Director</h2>
+            <ul>
+                <li class="menu-item"><a href="inicio.html">Inicio</a></li>
+                <li class="menu-item"><a href="documentos.html">Documentos</a></li>
+                <li class="menu-item"><a href="agenda.html">Agenda</a></li>
+                <li class="menu-item activo"><a href="reunion.html">Reuniones</a></li>
+                <li class="menu-item"><a href="reportes.html">Reportes</a></li>
+                <li class="menu-item"><a href="supervision.html">Supervisión</a></li>
+                <li class="menu-item cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="contenido">
+
+            <!-- CABECERA INSTITUCIONAL -->
+            <section class="cabecera">
+                <div class="cabecera-izquierda">
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1>Sistema de Gestión Institucional</h1>
+                        <p>Dirección General</p>
+                    </div>
+                </div>
+
+                <div class="cabecera-centro">
+                    <div class="director-mini">
+                        <div class="avatar-mini"></div>
+                        <div>
+                            <h3>Director General</h3>
+                            <p>Bienvenido al Sistema</p>
+                            <span class="online">● En línea</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cabecera-derecha">
+                    <p class="fecha">25 de Mayo de 2026</p>
+                    <p class="hora">09:45:30</p>
+                </div>
+            </section>
+
+
+            <section class="titulo-modulo">
+                <h1>Gestión de Reuniones</h1>
+                <p>Convocar, revisar y aprobar reuniones programadas como Director General</p>
+            </section>
+
+            <section class="panel panel-supervision">
+                <h2>Solicitudes de Aprobación</h2>
+                <div class="solicitudes-lista" id="listaSolicitudesReunion">
+                    <p class="sin-datos">Cargando solicitudes de aprobación...</p>
+                </div>
+            </section>
+
+            <div class="agenda-principal">
+                <!-- COLUMNA IZQUIERDA: CALENDARIO Y PRÓXIMAS REUNIONES -->
+                <div class="columna-izquierda">
+                    <section class="panel">
+                        <h2>Calendario</h2>
+                        <div class="calendario">
+                            <div class="calendario-header">
+                                <button class="mes-anterior">◄</button>
+                                <span class="mes-actual">Mayo 2026</span>
+                                <button class="mes-siguiente">►</button>
+                            </div>
+                            <div class="dias-semana">
+                                <div class="dia-semana">Lun</div>
+                                <div class="dia-semana">Mar</div>
+                                <div class="dia-semana">Mié</div>
+                                <div class="dia-semana">Jue</div>
+                                <div class="dia-semana">Vie</div>
+                                <div class="dia-semana">Sab</div>
+                                <div class="dia-semana">Dom</div>
+                            </div>
+                            <div class="dias-calendario"></div>
+                        </div>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Próximas Reuniones</h2>
+                        <div class="proximas-actividades" id="listaProximasReuniones"></div>
+                    </section>
+                </div>
+
+                <!-- COLUMNA DERECHA: FORMULARIO -->
+                <div class="columna-derecha">
+                    <section class="panel panel-formulario">
+                        <h2>Convocar / Actualizar Reunión</h2>
+                        <form class="formulario-actividad" id="formularioReunion">
+                            <div class="grupo-formulario">
+                                <label for="tema">Tema:</label>
+                                <input type="text" id="tema" name="tema" required>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="hora">Hora:</label>
+                                <input type="time" id="hora" name="hora" required>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="participantes">Participantes:</label>
+                                <textarea id="participantes" name="participantes" rows="3"
+                                    placeholder="Lista de participantes" required></textarea>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="estado">Estado:</label>
+                                <select id="estado" name="estado" required>
+                                    <option value="">Seleccionar estado</option>
+                                    <option value="convocada">Convocada</option>
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="cancelada">Cancelada</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-registrar">Convocar Reunión</button>
+                            <button type="reset" class="btn-limpiar">Limpiar</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <section class="panel">
+                <div class="panel-header">
+                    <h2>Reuniones Programadas</h2>
+                    <div class="filtros-actividades">
+                        <input type="text" placeholder="Buscar por tema o participante" class="filtro-busqueda">
+                        <select class="filtro-estado">
+                            <option value="">Todos los estados</option>
+                            <option value="convocada">Convocada</option>
+                            <option value="pendiente">Pendiente</option>
+                            <option value="cancelada">Cancelada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="tabla-actividades tabla-reuniones">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tema</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Participantes</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+           <footer class="footer">
+                <p>© 2026 INSTTIC - Director</p>
+           </footer>
+
+        </main>
+    </div>
+
+    <script src="./js/reunion.js"></script>
+</body>
+
+</html>
+<!DOCTYPE html>
