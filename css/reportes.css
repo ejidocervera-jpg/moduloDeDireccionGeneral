@@ -7,10 +7,10 @@
     --color-azul-claro: #3498db;     /* Azul para Documentos */
     --color-rojo: #e74c3c;           /* Rojo para Reuniones */
     --color-naranja: #f39c12;        /* Naranja para Actividades */
-    --color-coordinacion: #ff6b35;   /* Naranja de coordinación */
-    --color-fondo: #f4f6f9;          /* Fondo gris claro */
-    --color-blanco: #ffffff;         /* Fondo de bloques */
-    --color-borde: #e8e8e8;          /* Gris separador */
+    --color-coordinacion: #ff6b35;  
+    --color-fondo: #f4f6f9; 
+    --color-blanco: #ffffff; 
+    --color-borde: #e8e8e8;  
 }
 
 /* REGLAS BASE */
@@ -24,7 +24,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--color-fondo);
     color: #333;
-    line-height: 1.6;
 }
 
 /* ESTRUCTURA CONTENEDORA PRINCIPAL */
@@ -40,17 +39,17 @@ body {
 .cabecera {
     position: fixed;
     top: 0;
-    left: 260px;
+    width: 100%;
     right: 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
-    background: var(--color-blanco);
+    background: white;
     padding: 25px 30px;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
-    z-index: 90;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    z-index: 20;
 }
 
 .cabecera-izquierda,
@@ -138,6 +137,73 @@ body {
     font-weight: bold;
     color: var(--color-primario);
     margin-top: 8px;
+}
+
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENÚ LATERAL */
+.barra-lateral {
+    margin-top: 9%;
+    width: 260px;
+    background: #003366;
+    color: white;
+    padding: 25px;
+    position: fixed;
+    border-radius: 12px;
+    left: 0;
+    top: 0;
+    height: 84vh;
+    z-index: 100;
+}
+
+.barra-lateral h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.barra-lateral ul {
+    list-style: none;
+}
+
+.barra-lateral ul li {
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.barra-lateral ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.barra-lateral ul li:hover,
+.barra-lateral ul li.activo {
+    background: #0056b3;
+    transform: translateX(5px);
+    text-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.barra-lateral ul li.activo a {
+    font-weight: bold;
+}
+
+.cerrar,
+.cerrar-sesion {
+    background: #dc3545 !important;
+}
+
+.cerrar:hover,
+.cerrar-sesion:hover {
+    background: #b52b3a !important;
 }
 
 /* MÓDULO DE REPORTES */

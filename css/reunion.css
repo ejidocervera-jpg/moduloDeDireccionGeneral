@@ -25,7 +25,8 @@ min-height:100vh;
     border-radius: 12px; /* Añadido de agenda */
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 84vh;
+    margin-top: 9%;
     overflow-y: auto;
     z-index: 100;
 }
@@ -123,7 +124,7 @@ min-height:100vh;
 .cabecera {
     position: fixed;
     top: 0;
-    left: 260px;
+    width: 100%;
     right: 0;
     display: flex;
     align-items: center;
