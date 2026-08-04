@@ -30,7 +30,7 @@ body {
 .contenido {
     margin-left: 260px;
     padding: 30px;
-    padding-top: 220px; /* Evita que la cabecera fija tape el contenido */
+    padding-top: 220px;
     padding-bottom: 120px;
     width: calc(100% - 260px);
 }
@@ -196,12 +196,11 @@ body {
     font-weight: bold;
 }
 
-.cerrar,
 .cerrar-sesion {
+    margin-top: 22vh;
     background: #dc3545 !important;
 }
 
-.cerrar:hover,
 .cerrar-sesion:hover {
     background: #b52b3a !important;
 }
@@ -351,9 +350,6 @@ body {
 }
 
 /* Panel de Supervisión */
-.panel-supervision {
-    border-left: 5px solid var(--color-coordinacion);
-}
 
 .supervision-cuadricula {
     display: grid;
@@ -363,7 +359,7 @@ body {
 }
 
 .supervision-tarjeta {
-    background: #f8fbff;
+    background: #e6effc;
     border-radius: 12px;
     padding: 20px;
     border: 1px solid #e8eef6;
@@ -545,4 +541,9 @@ body {
 /* Recomendaciones */
 .recomendaciones-contenedor {
     width: 100%;
+}
+
+.footer {
+    text-align: center;
+    color: #666;
 }

@@ -8,168 +8,169 @@
 </head>
 <body>
     <div class="contenedor">
-    <!-- MENÚ LATERAL -->
-    <aside class="barra-lateral">
-        <h2 class="barra-lateral-titulo">Director</h2>
-        <ul class="barra-lateral-menu">
-            <li class="item-menu"><a href="inicio.html">Inicio</a></li>
-            <li class="item-menu"><a href="documentos.html">Documentos</a></li>
-            <li class="item-menu"><a href="agenda.html">Agenda</a></li>
-            <li class="item-menu"><a href="reunion.html">Reuniones</a></li>
-            <li class="item-menu"><a href="reportes.html">Reportes</a></li>
-            <li class="item-menu activo"><a href="supervision.html">Supervisión</a></li>
-            <li class="item-menu cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
-        </ul>
-    </aside>
+        <!-- MENÚ LATERAL -->
+        <aside class="barra-lateral">
+            <h2 class="barra-lateral-titulo">Director</h2>
+            <ul class="barra-lateral-menu">
+                <li class="item-menu"><a href="inicio.html">Inicio</a></li>
+                <li class="item-menu"><a href="documentos.html">Documentos</a></li>
+                <li class="item-menu"><a href="agenda.html">Agenda</a></li>
+                <li class="item-menu"><a href="reunion.html">Reuniones</a></li>
+                <li class="item-menu"><a href="reportes.html">Reportes</a></li>
+                <li class="item-menu activo"><a href="supervision.html">Supervisión</a></li>
+                <li class="item-menu cerrar-sesion"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="contenido">
-        <!-- CABECERA INSTITUCIONAL -->
-        <section class="cabecera">
-            <div class="cabecera-izquierda">
-                <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
-                <div class="info-sistema">
-                    <h1>Sistema de Gestión Institucional</h1>
-                    <p>Dirección General</p>
-                </div>
-            </div>
-
-            <div class="cabecera-centro">
-                <div class="director-mini">
-                    <div class="avatar-mini"></div>
-                    <div>
-                        <h3>Director General</h3>
-                        <p>Bienvenido al Sistema</p>
-                        <span class="en-linea">● En línea</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cabecera-derecha">
-                <p class="fecha">25 de Mayo de 2026</p>
-                <p class="hora">09:45:30</p>
-            </div>
-        </section>
-
-        <!-- MÓDULO DE SUPERVISIÓN -->
-        <section class="modulo-supervision">
-            <header class="cabecera-modulo">
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+            <!-- CABECERA INSTITUCIONAL -->
+            <section class="cabecera">
                 <div class="cabecera-izquierda">
-                    <h2>Supervisión Institucional</h2>
-                    <p>Supervisa procesos, aprobaciones y avance de proyectos clave para la dirección general.</p>
+                    <img src="./imagenes/logoinsttic.jpg" alt="Logo INSTTIC" class="logo">
+                    <div class="info-sistema">
+                        <h1>Sistema de Gestión Institucional</h1>
+                        <p>Dirección General</p>
+                    </div>
                 </div>
-                <span class="etiqueta-rol">Supervisión General</span>
-            </header>
 
-            <section class="seccion-controles">
-                <div class="controles-izquierdos">
-                    <div class="control-grupo">
-                        <label for="periodo-filtro">Período:</label>
-                        <select id="periodo-filtro">
-                            <option value="mayo2026">Mayo 2026 (Actual)</option>
-                            <option value="abril2026">Abril 2026</option>
-                            <option value="marzo2026">Marzo 2026</option>
-                        </select>
-                    </div>
-                    <div class="control-grupo">
-                        <label for="tipo-reporte">Filtro:</label>
-                        <select id="tipo-reporte">
-                            <option value="general">General</option>
-                            <option value="aprobaciones">Aprobaciones</option>
-                            <option value="procesos">Procesos</option>
-                            <option value="actividades">Actividades</option>
-                        </select>
+                <div class="cabecera-centro">
+                    <div class="director-mini">
+                        <div class="avatar-mini"></div>
+                        <div>
+                            <h3>Director General</h3>
+                            <p>Bienvenido al Sistema</p>
+                            <span class="en-linea">● En línea</span>
+                        </div>
                     </div>
                 </div>
-                <div class="controles-derechos">
-                    <button class="botn botn-primario" id="btn-generar">Actualizar Panel</button>
+
+                <div class="cabecera-derecha">
+                    <p class="fecha">25 de Mayo de 2026</p>
+                    <p class="hora">09:45:30</p>
                 </div>
             </section>
 
-            <section class="bloque-datos panel-supervision">
-                <h3 class="bloque-titulo">Indicadores de Supervisión</h3>
-                <div class="supervision-cuadricula">
-                    <div class="supervision-tarjeta">
-                        <h4>Solicitudes pendientes</h4>
-                        <p id="aprobaciones-pendientes">0 solicitudes</p>
+            <!-- MÓDULO DE SUPERVISIÓN -->
+            <section class="modulo-supervision">
+                <header class="cabecera-modulo">
+                    <div class="cabecera-izquierda">
+                        <h2>Supervisión Institucional</h2>
+                        <p>Supervisa procesos, aprobaciones y avance de proyectos clave para la dirección general.</p>
                     </div>
-                    <div class="supervision-tarjeta">
-                        <h4>Procesos en seguimiento</h4>
-                        <p id="procesos-seguimiento">0 procesos</p>
-                    </div>
-                    <div class="supervision-tarjeta">
-                        <h4>Eventos bajo revisión</h4>
-                        <p id="reuniones-revision">0 reuniones</p>
-                    </div>
-                </div>
-            </section>
+                    <span class="etiqueta-rol">Supervisión General</span>
+                </header>
 
-            <section class="icr-contenedor">
-                <div class="icr-tarjeta" style="border-left: 5px solid #2ecc71;">
-                    <div class="icr-cabecera">
-                        <h3>Documentos</h3>
-                        <span class="icr-icono"></span>
+                <section class="seccion-controles">
+                    <div class="controles-izquierdos">
+                        <div class="control-grupo">
+                            <label for="periodo-filtro">Período:</label>
+                            <select id="periodo-filtro">
+                                <option value="mayo2026">Mayo 2026 (Actual)</option>
+                                <option value="abril2026">Abril 2026</option>
+                                <option value="marzo2026">Marzo 2026</option>
+                            </select>
+                        </div>
+                        <div class="control-grupo">
+                            <label for="tipo-reporte">Filtro:</label>
+                            <select id="tipo-reporte">
+                                <option value="general">General</option>
+                                <option value="aprobaciones">Aprobaciones</option>
+                                <option value="procesos">Procesos</option>
+                                <option value="actividades">Actividades</option>
+                            </select>
+                        </div>
                     </div>
-                    <p class="icr-valor" id="kpi-documentos">0</p>
-                    <p class="icr-etiqueta">En revisión</p>
-                    <p class="icr-detalle">Métricas de aprobación</p>
-                </div>
-                <div class="icr-tarjeta" style="border-left: 5px solid #3498db;">
-                    <div class="icr-cabecera">
-                        <h3>Reuniones</h3>
-                        <span class="icr-icono"></span>
-                    </div>
-                    <p class="icr-valor" id="kpi-reuniones">0</p>
-                    <p class="icr-etiqueta">En evaluación</p>
-                    <p class="icr-detalle">Convocatorias y actas</p>
-                </div>
-                <div class="icr-tarjeta" style="border-left: 5px solid #f39c12;">
-                    <div class="icr-cabecera">
-                        <h3>Actividades</h3>
-                        <span class="icr-icono"></span>
-                    </div>
-                    <p class="icr-valor" id="kpi-actividades">0</p>
-                    <p class="icr-etiqueta">Supervisadas</p>
-                    <p class="icr-detalle">Avance institucional</p>
-                </div>
-                <div class="icr-tarjeta" style="border-left: 5px solid #9b59b6;">
-                    <div class="icr-cabecera">
-                        <h3>Coordinación</h3>
-                        <span class="icr-icono"></span>
-                    </div>
-                    <p class="icr-valor" id="kpi-coordinacion">0</p>
-                    <p class="icr-etiqueta">Iniciativas</p>
-                    <p class="icr-detalle">Interdepartamental</p>
-                </div>
-            </section>
-
-            <section class="bloque-datos">
-                <h3 class="bloque-titulo">Solicitudes de Supervisión</h3>
-                <div class="lista-solicitudes" id="lista-solicitudes-supervision">
-                    <p class="sin-datos">Actualiza el panel para ver solicitudes de supervisión</p>
-                </div>
-            </section>
-
-            <section class="bloque-datos">
-                <h3 class="bloque-titulo">Seguimiento de Procesos</h3>
-                <div class="tabla-desplazamiento">
-                    <table class="tabla-reporte" id="tabla-reporte-supervision">
-                        <thead>
-                            <tr>
-                                <th>Proceso</th>
-                                <th>Responsable</th>
-                                <th>Avance</th>
-                                <th>Estado</th>
-                                <th>Fecha límite</th>
-                            </tr>
-                        </table>
+                    <div class="controles-derechos">
+                        <button class="botn botn-primario" id="btn-generar">Actualizar Panel</button>
                     </div>
                 </section>
-            </main>
-        </div>
-              <footer class="footer">
+
+                <section class="bloque-datos panel-supervision">
+                    <h3 class="bloque-titulo">Indicadores de Supervisión</h3>
+                    <div class="supervision-cuadricula">
+                        <div class="supervision-tarjeta">
+                            <h4>Solicitudes pendientes</h4>
+                            <p id="aprobaciones-pendientes">0 solicitudes</p>
+                        </div>
+                        <div class="supervision-tarjeta">
+                            <h4>Procesos en seguimiento</h4>
+                            <p id="procesos-seguimiento">0 procesos</p>
+                        </div>
+                        <div class="supervision-tarjeta">
+                            <h4>Eventos bajo revisión</h4>
+                            <p id="reuniones-revision">0 reuniones</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="icr-contenedor">
+                    <div class="icr-tarjeta">
+                        <div class="icr-cabecera">
+                            <h3>Documentos</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-documentos">0</p>
+                        <p class="icr-etiqueta">En revisión</p>
+                        <p class="icr-detalle">Métricas de aprobación</p>
+                    </div>
+                    <div class="icr-tarjeta">
+                        <div class="icr-cabecera">
+                            <h3>Reuniones</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-reuniones">0</p>
+                        <p class="icr-etiqueta">En evaluación</p>
+                        <p class="icr-detalle">Convocatorias y actas</p>
+                    </div>
+                    <div class="icr-tarjeta">
+                        <div class="icr-cabecera">
+                            <h3>Actividades</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-actividades">0</p>
+                        <p class="icr-etiqueta">Supervisadas</p>
+                        <p class="icr-detalle">Avance institucional</p>
+                    </div>
+                    <div class="icr-tarjeta">
+                        <div class="icr-cabecera">
+                            <h3>Coordinación</h3>
+                            <span class="icr-icono"></span>
+                        </div>
+                        <p class="icr-valor" id="kpi-coordinacion">0</p>
+                        <p class="icr-etiqueta">Iniciativas</p>
+                        <p class="icr-detalle">Interdepartamental</p>
+                    </div>
+                </section>
+
+                <section class="bloque-datos">
+                    <h3 class="bloque-titulo">Solicitudes de Supervisión</h3>
+                    <div class="lista-solicitudes" id="lista-solicitudes-supervision">
+                        <p class="sin-datos">Actualiza el panel para ver solicitudes de supervisión</p>
+                    </div>
+                </section>
+
+                <section class="bloque-datos">
+                    <h3 class="bloque-titulo">Seguimiento de Procesos</h3>
+                    <div class="tabla-desplazamiento">
+                        <table class="tabla-reporte" id="tabla-reporte-supervision">
+                            <thead>
+                                <tr>
+                                    <th>Proceso</th>
+                                    <th>Responsable</th>
+                                    <th>Avance</th>
+                                    <th>Estado</th>
+                                    <th>Fecha límite</th>
+                                </tr>
+                            </table>
+                        </div>
+                </section>
+            </section>
+            <footer class="footer">
                 <p>© 2026 INSTTIC - Director</p>
             </footer>
+        </main>
+    </div>
     <script src="./js/supervision.js"></script>
 </body>
 </html>

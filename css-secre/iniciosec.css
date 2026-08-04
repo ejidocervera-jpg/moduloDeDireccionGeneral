@@ -187,12 +187,6 @@ body {
     font-size: 16px;
 }
 
-.card-documentos { border-top-color: #0056b3; }
-.card-agenda { border-top-color: #28a745; }
-.card-reunion { border-top-color: #ff9800; }
-.card-caja { border-top-color: #9c27b0; }
-.card-reportes { border-top-color: #f39c12; }
-
 .acciones {
     margin-bottom: 25px;
 }
@@ -230,10 +224,9 @@ body {
 }
 
 .resumen-card {
-    background: #f9fbff;
+    background: #eff1f7;
     padding: 22px;
     border-radius: 16px;
-    border-left: 6px solid #003366;
 }
 
 .resumen-card h4 {
@@ -249,5 +242,4 @@ body {
 .footer {
     text-align: center;
     color: #666;
-    margin-top: 10px;
 }

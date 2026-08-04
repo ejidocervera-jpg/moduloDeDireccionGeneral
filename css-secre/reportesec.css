@@ -156,11 +156,10 @@ body {
 }
 
 .indicadores-reportes .card {
-    background: #f9fbff;
+    background: #e9eaee;
     padding: 24px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
-    border-left: 6px solid #003366;
 }
 
 .indicadores-reportes .card h3 {
@@ -199,8 +198,7 @@ body {
 }
 
 .lista-reportes li {
-    background: #f8fbff;
-    border-left: 5px solid #003366;
+    background: #e9eaee;
     padding: 15px 18px;
     margin-bottom: 12px;
     border-radius: 12px;

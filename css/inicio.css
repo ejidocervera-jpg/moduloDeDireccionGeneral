@@ -66,8 +66,8 @@ body {
     font-weight: bold;
 }
 
-.cerrar,
 .cerrar-sesion {
+    margin-top: 22vh;
     background: #dc3545 !important;
 }
 
@@ -353,5 +353,3 @@ footer {
     text-align: center;
     color: #666;
 }
-
-/* RESPONSIVE MODERNO */

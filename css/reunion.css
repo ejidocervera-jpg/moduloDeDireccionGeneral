@@ -95,17 +95,12 @@ min-height:100vh;
     font-weight: bold;
 }
 
-/* Botón de cerrar sesión con el color rojo normal y visible de agenda */
-.menu-item.cerrar-sesion {
+.cerrar-sesion {
+    margin-top: 22vh;
     background: #dc3545 !important;
-    /* Eliminado el borde superior y márgenes extra para mantener el formato limpio */
 }
 
-.menu-item.cerrar-sesion a {
-    color: white !important;
-}
-
-.menu-item.cerrar-sesion:hover {
+.cerrar-sesion:hover {
     background: #b52b3a !important;
 }
 
@@ -682,11 +677,6 @@ min-height:100vh;
     background-color: #003f88;
 }
 
-.panel-supervision {
-    border-left-color: #003366;
-    border-left: 4px solid #003366;
-}
-
 .solicitudes-lista {
     display: grid;
     gap: 14px;
@@ -730,8 +720,4 @@ min-height:100vh;
 .footer {
     text-align: center;
     color: #666;
-};
-
-
-/*RESPONSIVE*/
-
+}
